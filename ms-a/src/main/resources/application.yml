@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ms-a
+
+server:
+  port: 8001
+
+logging:
+  pattern:
+    console: '%black(%d{ISO8601}) | %highlight(%-5level) | %X{correlationId} | %yellow(%C): %msg%n%throwable'
+    file: '%d | %p | %X{correlationId} | %C{1.} | [%t] %m%n'
+  logback:
+    rollingpolicy:
+      max-history: 90
